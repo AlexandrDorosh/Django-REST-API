@@ -1,13 +1,40 @@
 import React, { Fragment } from "react";
+import UserItem from "./userItem/userItem"
+const UsersList = ({ UsersList, onDeleteItem }) => {
 
-const UsersList = () => {
+    const item = UsersList.map(item =>{
+        console.log('item = > ', item)
+        return (
+        <UserItem 
+        key={item.id}
+        id = {item.id} 
+        name = {item.name} 
+        email={item.email} 
+        message={item.message} 
+        created_at={item.created_at} 
+        onDeleteItem={()=> onDeleteItem(item.id)}
+        />
+        )
+    });
     return(
         <Fragment>
-        <div className="outer-container" >
-            <h1> User Manager Table </h1> 
-            <UserItem />
-        </div>
+            <div className="outer-container">
+                <h1> User Manager Table </h1> 
+                <table>
+                 < thead >
+                     <tr >
+                     <th> Id </th>   
+                     <th> Name </th>   
+                     <th> Email </th>   
+                     <th> Message </th>
+                     <th> Delete </th>
+                    <th> </th>   
+                    </tr>  
+                    </thead>  
+                    {item}
+                    </table>
+                    </div>
         </Fragment>
-    )
-}
+    );
+};
 export default UsersList
