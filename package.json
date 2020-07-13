@@ -4,8 +4,8 @@
   "description": "Simple Django rest framework + react + redux template",
   "main": "index.js",
   "scripts": {
-      "dev": "webpack --mode development --watch ./usermanager/frontend/src/index.js --output ./usermanager/frontend/static/frontend/bundle.js",
-      "build": "webpack --mode production --watch ./usermanager/frontend/src/index.js --output ./usermanager/frontend/static/frontend/bundle.js"
+    "dev": "webpack --mode development --watch ./usermanager/frontend/src/index.js --output ./usermanager/frontend/static/frontend/bundle.js",
+    "build": "webpack --mode production --watch ./usermanager/frontend/src/index.js --output ./usermanager/frontend/static/frontend/bundle.js"
   },
   "repository": {
     "type": "git",
@@ -29,6 +29,7 @@
     "babel-plugin-transform-class-properties": "^6.24.1",
     "prop-types": "^15.7.2",
     "react": "^16.13.1",
-    "react-dom": "^16.13.1"
+    "react-dom": "^16.13.1",
+    "react-router-dom": "^5.2.0"
   }
 }
